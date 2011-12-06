@@ -33,7 +33,9 @@ method type ($ext) {
 
 method extensions ($type) {
   if %.types.exists($type) {
-    return %.types{$type};
+    #$*ERR.say: "Typedef: "~%.types{$type}.perl;
+    return @(%.types{$type});
   }
   return;
 }
+
