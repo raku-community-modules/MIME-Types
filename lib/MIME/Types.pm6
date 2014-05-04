@@ -21,18 +21,18 @@ method new (Stringy $mtfile) {
       $exts{$ext} = $ctype;
     }
   }
-  self.bless(*, :$exts, :$types);
+  self.bless(:$exts, :$types);
 }
 
 method type ($ext) {
-  if %.exts.exists($ext) {
+  if %.exts{$ext}:exists {
     return %.exts{$ext};
   }
   return;
 }
 
 method extensions ($type) {
-  if %.types.exists($type) {
+  if %.types{$type}:exists {
     #$*ERR.say: "Typedef: "~%.types{$type}.perl;
     return @(%.types{$type});
   }
