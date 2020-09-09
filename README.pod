@@ -1,5 +1,10 @@
 =encoding utf-8
 
+=for HTML
+
+<a href='https://travis-ci.com/raku-community-modules/raku-mime-types.svg?branch=master'><img src='https://api.travis-ci.com/raku-community-modules/raku-mime-types.svg?branch=master&status=passed'></a>
+=end HTML
+
 =head1 NAME
 
 MIME::Types - determine mime type by file extension
