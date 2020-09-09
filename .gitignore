@@ -3,3 +3,4 @@ Makefile
 blib/
 /raku-mime-types.iml
 .idea
+.precomp/
