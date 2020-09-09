@@ -1,0 +1,34 @@
+=encoding utf-8
+
+=head1 NAME
+
+MIME::Types - determine mime type by file extension
+
+=head1 DESCRIPTION
+
+A Raku (formerly Perl 6) library that reads the mime.types file as used by
+many Linux distributions, and web servers, and returns an object
+that can be queried by either type or extension.
+
+=head1 SYNOPSIS
+
+    use MIME::Types;
+    my $mime = MIME::Types.new("/etc/mime.types");
+    my $type = $mime.type('txt'); ## Returns: 'text/plain';
+    my @known_extensions = $mime.extensions('application/vnd.ms-excel');
+    ## Returns: [ 'xls', 'xlb', 'xlt' ]
+
+=head1 EXAMPLE
+
+An example mime.types is included in the doc/ directory, and is used by
+the tests in t/.
+
+=head1 LICENCE
+
+Artistic 2.0
+
+=head1 AUTHOR
+
+Timothy Totten 
+http://huri.net/
+https://github.com/supernovus/
