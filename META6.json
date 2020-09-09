@@ -5,7 +5,6 @@
   "perl": "6.*",
   "meta-version": "1",
   "auth": "github:raku-community-modules",
-  "depends": [],
   "provides": {
     "MIME::Types": "lib/MIME/Types.rakumod"
   },
@@ -13,7 +12,7 @@
     "bugtracker": "https://github.com/raku-community-modules/raku-mime-types/issues",
     "source": "https://github.com/raku-community-modules/raku-mime-types.git"
   },
-  "license": "Artistic License 2.0",
+  "license": "Artistic-2.0",
   "tags": [
     "MIME",
     "type",

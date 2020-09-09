@@ -30,7 +30,7 @@ the tests in t/.
 
 =head1 LICENCE
 
-Artistic 2.0
+This is licensed under the Artistic 2.0 license
 
 =head1 AUTHOR
 
