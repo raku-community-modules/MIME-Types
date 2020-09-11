@@ -5,7 +5,7 @@ unit class MIME::Types;
 has %.exts;
 has %.types;
 
-method new (Stringy $mtfile) {
+method new (Str() $mtfile = %?RESOURCES<mime.types>) {
   if $mtfile.IO !~~ :f {
     die "Invalid mime.types file: $mtfile";
   }
