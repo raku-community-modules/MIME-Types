@@ -1,14 +1,14 @@
 ###############################################################################
 #
-#  MIME-TYPES and the extensions that represent them
+#  MIME media types and the extensions that represent them.
 #
-#  The format of this file is a MIME type on the left and zero or more
+#  The format of this file is a media type on the left and zero or more
 #  filename extensions on the right.  Programs using this file will map
 #  files ending with those extensions to the associated type.
 #
-#  This file is part of the "mime-support" package.  Please send email (not a
-#  bug report) to mime-support@packages.debian.org if you would like new types
-#  and/or extensions to be added.
+#  This file is part of the "mime-support" package.  Please report a bug using
+#  the "reportbug" command of the "reportbug" package if you would like new
+#  types or extensions to be added.
 #
 #  The reason that all types are managed by the mime-support package instead
 #  allowing individual packages to install types in much the same way as they
@@ -19,12 +19,6 @@
 #  Users can add their own types if they wish by creating a ".mime.types"
 #  file in their home directory.  Definitions included there will take
 #  precedence over those listed here.
-#
-#  Note: Compression schemes like "gzip", "bzip", and "compress" are not
-#  actually "mime-types".  They are "encodings" and hence must _not_ have
-#  entries in this file to map their extensions.  The "mime-type" of an
-#  encoded file refers to the type of data that has been encoded, not the
-#  type of encoding.
 #
 ###############################################################################
 
@@ -41,13 +35,13 @@ application/batch-SMTP
 application/bbolin				lin
 application/beep+xml
 application/cals-1840
-application/cap					cap pcap
 application/commonground
 application/cu-seeme				cu
 application/cybercash
 application/davmount+xml			davmount
 application/dca-rft
 application/dec-dx
+application/dicom				dcm
 application/docbook+xml
 application/dsptype				tsp
 application/dvcs
@@ -55,10 +49,14 @@ application/ecmascript				es
 application/edi-consent
 application/edi-x12
 application/edifact
+application/epub+zip				epub
 application/eshop
-application/font-tdpfr
+application/font-sfnt				otf ttf
+application/font-tdpfr				pfr
+application/font-woff				woff
 application/futuresplash			spl
 application/ghostview
+application/gzip				gz
 application/hta					hta
 application/http
 application/hyperstudio
@@ -74,14 +72,16 @@ application/isup
 application/java-archive			jar
 application/java-serialized-object		ser
 application/java-vm				class
-application/javascript				js
+application/javascript				js mjs
 application/json				json
+application/ld+json				jsonld
 application/m3g					m3g
 application/mac-binhex40			hqx
 application/mac-compactpro			cpt
 application/macwriteii
 application/marc
 application/mathematica				nb nbp
+application/mbox				mbox
 application/ms-tnef
 application/msaccess				mdb
 application/msword				doc dot
@@ -90,15 +90,16 @@ application/news-message-id
 application/news-transmission
 application/ocsp-request
 application/ocsp-response
-application/octet-stream			bin
+application/octet-stream			bin deploy msu msp
 application/oda					oda
+application/oebps-package+xml			opf
 application/ogg					ogx
 application/onenote				one onetoc2 onetmp onepkg
 application/parityfec
 application/pdf					pdf
-application/pgp-encrypted
+application/pgp-encrypted			pgp
 application/pgp-keys				key
-application/pgp-signature			pgp
+application/pgp-signature			sig
 application/pics-rules				prf
 application/pkcs10
 application/pkcs7-mime
@@ -115,7 +116,6 @@ application/rar					rar
 application/rdf+xml				rdf
 application/remote-printing
 application/riscos
-application/rss+xml				rss
 application/rtf					rtf
 application/sdp
 application/set-payment
@@ -127,18 +127,20 @@ application/sgml-open-catalog
 application/sieve
 application/sla					stl
 application/slate
-application/smil				smi smil
+application/smil+xml				smi smil
 application/timestamp-query
 application/timestamp-reply
 application/vemmi
+application/wasm                                wasm
 application/whoispp-query
 application/whoispp-response
 application/wita
 application/x400-bp
 application/xhtml+xml				xhtml xht
-application/xml					xml xsl xsd
+application/xml					xml xsd
 application/xml-dtd
 application/xml-external-parsed-entity
+application/xslt+xml				xsl xslt
 application/xspf+xml				xspf
 application/zip					zip
 application/vnd.3M.Post-it-Notes
@@ -166,6 +168,7 @@ application/vnd.cups-postscript
 application/vnd.cups-raster
 application/vnd.cups-raw
 application/vnd.cybank
+application/vnd.debian.binary-package						deb ddeb udeb
 application/vnd.dna
 application/vnd.dpgraph
 application/vnd.dxr
@@ -187,6 +190,7 @@ application/vnd.eudora.data
 application/vnd.fdf
 application/vnd.ffsns
 application/vnd.flographit
+application/vnd.font-fontforge-sfd						sfd
 application/vnd.framemaker
 application/vnd.fsc.weblaunch
 application/vnd.fujitsu.oasys
@@ -268,6 +272,7 @@ application/vnd.ms-excel.addin.macroEnabled.12					xlam
 application/vnd.ms-excel.sheet.binary.macroEnabled.12				xlsb
 application/vnd.ms-excel.sheet.macroEnabled.12					xlsm
 application/vnd.ms-excel.template.macroEnabled.12				xltm
+application/vnd.ms-fontobject							eot
 application/vnd.ms-lrm
 application/vnd.ms-officetheme							thmx
 application/vnd.ms-pki.seccat							cat
@@ -313,8 +318,6 @@ application/vnd.openxmlformats-officedocument.presentationml.slide		sldx
 application/vnd.openxmlformats-officedocument.presentationml.slideshow		ppsx
 application/vnd.openxmlformats-officedocument.presentationml.template		potx
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet		xlsx
-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet		xlsx
-application/vnd.openxmlformats-officedocument.spreadsheetml.template		xltx
 application/vnd.openxmlformats-officedocument.spreadsheetml.template		xltx
 application/vnd.openxmlformats-officedocument.wordprocessingml.document		docx
 application/vnd.openxmlformats-officedocument.wordprocessingml.template		dotx
@@ -365,6 +368,7 @@ application/vnd.sun.xml.writer.template						stw
 application/vnd.svd
 application/vnd.swiftview-ics
 application/vnd.symbian.install							sis
+application/vnd.tcpdump.pcap							cap pcap
 application/vnd.triscape.mxs
 application/vnd.trueapp
 application/vnd.truedoc
@@ -386,7 +390,7 @@ application/vnd.uplanet.signal
 application/vnd.vcx
 application/vnd.vectorworks
 application/vnd.vidsoft.vidconference
-application/vnd.visio								vsd
+application/vnd.visio								vsd vst vsw vss
 application/vnd.vividence.scriptfile
 application/vnd.wap.sic
 application/vnd.wap.slc
@@ -401,6 +405,7 @@ application/vnd.wt.stf
 application/vnd.xara
 application/vnd.xfdl
 application/vnd.yellowriver-custom-menu
+application/zlib
 application/x-123				wk
 application/x-7z-compressed			7z
 application/x-abiword				abw
@@ -423,7 +428,8 @@ application/x-dms				dms
 application/x-doom				wad
 application/x-dvi				dvi
 application/x-executable
-application/x-font				pfa pfb gsf pcf pcf.Z
+application/x-font				pfa pfb gsf
+application/x-font-pcf				pcf pcf.Z
 application/x-freemind				mm
 application/x-futuresplash			spl
 application/x-ganttproject			gan
@@ -433,13 +439,14 @@ application/x-graphing-calculator		gcf
 application/x-gtar				gtar
 application/x-gtar-compressed			tgz taz
 application/x-hdf				hdf
-application/x-httpd-eruby			rhtml
-application/x-httpd-php				phtml pht php
-application/x-httpd-php-source			phps
-application/x-httpd-php3			php3
-application/x-httpd-php3-preprocessed		php3p
-application/x-httpd-php4			php4
-application/x-httpd-php5			php5
+#application/x-httpd-eruby			rhtml
+#application/x-httpd-php			phtml pht php
+#application/x-httpd-php-source			phps
+#application/x-httpd-php3			php3
+#application/x-httpd-php3-preprocessed		php3p
+#application/x-httpd-php4			php4
+#application/x-httpd-php5			php5
+application/x-hwp				hwp
 application/x-ica				ica
 application/x-info				info
 application/x-internet-signup			ins isp
@@ -465,12 +472,14 @@ application/x-lzx				lzx
 application/x-maker				frm maker frame fm fb book fbdoc
 application/x-mif				mif
 application/x-mpegURL				m3u8
+application/x-ms-application			application
+application/x-ms-manifest			manifest
 application/x-ms-wmd				wmd
 application/x-ms-wmz				wmz
 application/x-msdos-program			com exe bat dll
 application/x-msi				msi
 application/x-netcdf				nc
-application/x-ns-proxy-autoconfig		pac dat
+application/x-ns-proxy-autoconfig		pac
 application/x-nwc				nwc
 application/x-object				o
 application/x-oz-application			oza
@@ -481,9 +490,11 @@ application/x-qgis				qgs shp shx
 application/x-quicktimeplayer			qtl
 application/x-rdp				rdp
 application/x-redhat-package-manager		rpm
+application/x-rss+xml				rss
 application/x-ruby				rb
 application/x-rx
 application/x-scilab				sci sce
+application/x-scilab-xcos			xcos
 application/x-sh				sh
 application/x-shar				shar
 application/x-shellscript
@@ -511,11 +522,10 @@ application/x-x509-ca-cert			crt
 application/x-xcf				xcf
 application/x-xfig				fig
 application/x-xpinstall				xpi
+application/x-xz				xz
 
 audio/32kadpcm
 audio/3gpp
-audio/amr					amr
-audio/amr-wb					awb
 audio/amr					amr
 audio/amr-wb					awb
 audio/annodex					axa
@@ -529,7 +539,7 @@ audio/mp4a-latm
 audio/mpa-robust
 audio/mpeg					mpga mpega mp2 mp3 m4a
 audio/mpegurl					m3u
-audio/ogg					oga ogg spx
+audio/ogg					oga ogg opus spx
 audio/parityfec
 audio/prs.sid					sid
 audio/telephone-event
@@ -617,11 +627,21 @@ chemical/x-vmd					vmd
 chemical/x-xtel					xtel
 chemical/x-xyz					xyz
 
+font/collection					ttc
+font/otf					ttf otf
+font/sfnt					ttf otf
+font/ttf					ttf otf
+font/woff					woff
+font/woff2					woff2
+
 image/cgm
 image/g3fax
 image/gif					gif
 image/ief					ief
+image/jp2					jp2 jpg2
 image/jpeg					jpeg jpg jpe
+image/jpm					jpm
+image/jpx					jpx jpf
 image/naplps
 image/pcx					pcx
 image/png					png
@@ -638,6 +658,7 @@ image/vnd.fpx
 image/vnd.fst
 image/vnd.fujixerox.edmics-mmr
 image/vnd.fujixerox.edmics-rlc
+image/vnd.microsoft.icon			ico
 image/vnd.mix
 image/vnd.net-fpx
 image/vnd.svf
@@ -651,7 +672,7 @@ image/x-coreldrawpattern			pat
 image/x-coreldrawtemplate			cdt
 image/x-corelphotopaint				cpt
 image/x-epson-erf				erf
-image/x-icon					ico
+image/x-icon
 image/x-jg					art
 image/x-jng					jng
 image/x-ms-bmp					bmp
@@ -711,7 +732,7 @@ multipart/report
 multipart/signed
 multipart/voice-message
 
-text/cache-manifest				manifest
+text/cache-manifest				appcache
 text/calendar					ics icz
 text/css					css
 text/csv					csv
@@ -722,8 +743,9 @@ text/h323					323
 text/html					html htm shtml
 text/iuls					uls
 text/mathml					mml
+text/markdown                                   md markdown
 text/parityfec
-text/plain					asc txt text pot brf
+text/plain					asc txt text pot brf srt
 text/prs.lines.tag
 text/rfc822-headers
 text/richtext					rtx
@@ -732,9 +754,12 @@ text/scriptlet					sct wsc
 text/t140
 text/texmacs					tm
 text/tab-separated-values			tsv
+text/turtle					ttl
 text/uri-list
+text/vcard					vcf vcard
 text/vnd.abc
 text/vnd.curl
+text/vnd.debian.copyright
 text/vnd.DMClientScript
 text/vnd.flatland.3dml
 text/vnd.fly
@@ -764,6 +789,7 @@ text/x-dsrc					d
 text/x-diff					diff patch
 text/x-haskell					hs
 text/x-java					java
+text/x-lilypond					ly
 text/x-literate-haskell				lhs
 text/x-makefile
 text/x-moc					moc
@@ -779,7 +805,6 @@ text/x-sh					sh
 text/x-tcl					tcl tk
 text/x-tex					tex ltx sty cls
 text/x-vcalendar				vcs
-text/x-vcard					vcf
 
 video/3gpp					3gp
 video/annodex					axv

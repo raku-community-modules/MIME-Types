@@ -8,6 +8,9 @@
   "provides": {
     "MIME::Types": "lib/MIME/Types.rakumod"
   },
+  "resources" : [
+    "mime.types"
+  ],
   "support": {
     "bugtracker": "https://github.com/raku-community-modules/raku-mime-types/issues",
     "source": "https://github.com/raku-community-modules/raku-mime-types.git"

@@ -7,13 +7,32 @@ use lib 'lib';
 
 use MIME::Types;
 
-my $mime = MIME::Types.new('./doc/mime.types');
+plan 12;
 
-plan 5;
+my Str $mime-file-str           = ($?FILE.IO.dirname ~ '/../resources/mime.types');
+my $mime-from-string            = MIME::Types.new($mime-file-str);
 
-is $mime.type('txt'), 'text/plain', 'Get a simple type';
-is $mime.type('svg'), 'image/svg+xml', 'Get a + type';
-my @known = $mime.extensions('application/vnd.ms-excel');
-is @known[0], 'xls', 'Get extensions, first';
-is @known[1], 'xlb', 'Get extensions, second';
-is @known[2], 'xlt', 'Get extensions, third';
+isa-ok($mime-from-string        , MIME::Types    ,"the object via new(Str)      is-a '{$mime-from-string.^name}'");
+is $mime-from-string.type('txt'), 'text/plain'   ,"get a simple type            - plain text";
+
+my $mime-from-iopath            = MIME::Types.new($mime-file-str.IO);
+
+isa-ok($mime-from-iopath,         MIME::Types    ,"the object via new(IO::Path) is-a '{$mime-from-iopath.^name}'");
+is $mime-from-string.type('md') ,'text/markdown' ,"get a simple type            - markdown";
+
+my $mime-default                = MIME::Types.new;
+
+isa-ok($mime-default            , MIME::Types     ,"the object via new()         is-a '{$mime-default.^name}'");
+is $mime-default.type('txt')    , 'text/plain'    ,"get a simple type            - plain text";
+is $mime-default.type('svg')    , 'image/svg+xml' ,"get a + type";
+
+is $mime-default.type('foo')    , Nil             ,"get an invalid type";
+
+my @known = $mime-default.extensions('application/vnd.ms-excel');
+is @known[0], 'xls', 'get extensions, first';
+is @known[1], 'xlb', 'get extensions, second';
+is @known[2], 'xlt', 'get extensions, third';
+
+dies-ok { MIME::Types.new("/non/existent/path") }, "bogus mime type file dies";
+
+done-testing;
