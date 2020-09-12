@@ -18,14 +18,18 @@ that can be queried by either type or extension.
 =head1 SYNOPSIS
 
     use MIME::Types;
+
+    # Specify the mime file you wisg to use
+    # Or don't pass anything and get the default from the 'resourses' directory
     my $mime = MIME::Types.new("/etc/mime.types");
+
     my $type = $mime.type('txt'); ## Returns: 'text/plain';
     my @known_extensions = $mime.extensions('application/vnd.ms-excel');
     ## Returns: [ 'xls', 'xlb', 'xlt' ]
 
 =head1 EXAMPLE
 
-An example mime.types is included in the doc/ directory, and is used by
+An example mime.types is included in the resourses/ directory, and is used by
 the tests in t/.
 
 =head1 LICENCE
