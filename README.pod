@@ -2,8 +2,7 @@
 
 =for HTML
 
-<a href='https://travis-ci.com/raku-community-modules/raku-mime-types.svg?branch=master'><img src='https://api.travis-ci.com/raku-community-modules/raku-mime-types.svg?branch=master&status=passed'></a>
-=end HTML
+<a href='https://travis-ci.com/raku-community-modules/raku-mime-types'><img src='https://api.travis-ci.com/raku-community-modules/raku-mime-types.svg?branch=master' /></a>
 
 =head1 NAME
 
