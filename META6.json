@@ -1,10 +1,14 @@
 {
   "name": "MIME::Types",
   "description": "Parse a mime.types file, and query the results",
-  "version": "*",
+  "version": "0.1",
   "perl": "6.*",
   "meta-version": "1",
-  "auth": "github:raku-community-modules",
+    "auth": "github:raku-community-modules",
+    "authors": ["Timothy Totten",
+                "Sizhe Zhao",
+                "Cam Stuart",
+                "Raku community"],
   "provides": {
     "MIME::Types": "lib/MIME/Types.rakumod"
   },
