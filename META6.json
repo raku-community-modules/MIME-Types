@@ -16,8 +16,8 @@
     "mime.types"
   ],
   "support": {
-    "bugtracker": "https://github.com/raku-community-modules/raku-mime-types/issues",
-    "source": "https://github.com/raku-community-modules/raku-mime-types.git"
+    "bugtracker": "https://github.com/raku-community-modules/MIME-Types/issues",
+    "source": "https://github.com/raku-community-modules/MIME-Types.git"
   },
   "license": "Artistic-2.0",
   "tags": [
