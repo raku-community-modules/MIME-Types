@@ -9,7 +9,7 @@ MIME::Types - determine mime type by file extension
 
 =head1 DESCRIPTION
 
-A Raku (formerly Perl 6) library that reads the mime.types file as used by
+A Raku library that reads the mime.types file as used by
 many Linux distributions, and web servers, and returns an object
 that can be queried by either type or extension.
 
