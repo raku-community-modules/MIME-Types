@@ -1,21 +1,15 @@
-#!/usr/bin/env raku
-
-use v6;
 use Test;
-
-use lib 'lib';
 
 use MIME::Types;
 
 plan 12;
 
-my Str $mime-file-str           = ($?FILE.IO.dirname ~ '/../resources/mime.types');
-my $mime-from-string            = MIME::Types.new($mime-file-str);
+my $mime-from-string            = MIME::Types.new;
 
 isa-ok($mime-from-string        , MIME::Types    ,"the object via new(Str)      is-a '{$mime-from-string.^name}'");
 is $mime-from-string.type('txt'), 'text/plain'   ,"get a simple type            - plain text";
 
-my $mime-from-iopath            = MIME::Types.new($mime-file-str.IO);
+my $mime-from-iopath            = MIME::Types.new: $?FILE.IO.parent.parent.add('resources').add('mime.types');
 
 isa-ok($mime-from-iopath,         MIME::Types    ,"the object via new(IO::Path) is-a '{$mime-from-iopath.^name}'");
 is $mime-from-string.type('md') ,'text/markdown' ,"get a simple type            - markdown";
@@ -35,4 +29,4 @@ is @known[2], 'xlt', 'get extensions, third';
 
 dies-ok { MIME::Types.new("/non/existent/path") }, "bogus mime type file dies";
 
-done-testing;
+# vim: expandtab shiftwidth=4

@@ -1,28 +1,36 @@
 {
-  "name": "MIME::Types",
-  "description": "Parse a mime.types file, and query the results",
-  "version": "0.1",
-  "perl": "6.*",
+  "auth": "zef:raku-community-modules",
+  "authors": [
+    "Timothy Totten",
+    "Sizhe Zhao",
+    "Cam Stuart"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "determine mime type by file extension",
+  "license": "Artistic-2.0",
   "meta-version": "1",
-    "auth": "github:raku-community-modules",
-    "authors": ["Timothy Totten",
-                "Sizhe Zhao",
-                "Cam Stuart",
-                "Raku community"],
+  "name": "MIME::Types",
+  "perl": "6.*",
   "provides": {
     "MIME::Types": "lib/MIME/Types.rakumod"
   },
-  "resources" : [
+  "resources": [
     "mime.types"
   ],
+  "source-url": "https://github.com/raku-community-modules/MIME-Types.git",
   "support": {
     "bugtracker": "https://github.com/raku-community-modules/MIME-Types/issues",
     "source": "https://github.com/raku-community-modules/MIME-Types.git"
   },
-  "license": "Artistic-2.0",
   "tags": [
     "MIME",
     "type",
     "extension"
-  ]
+  ],
+  "test-depends": [
+  ],
+  "version": "0.2"
 }

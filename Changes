@@ -1,0 +1,5 @@
+Revision history for MIME-Types
+
+{{$NEXT}}
+    - Made sure the default object is parsed only once
+    - First release in the zef ecosystem

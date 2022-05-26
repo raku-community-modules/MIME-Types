@@ -1,6 +1,2 @@
-Makefile
-*.swp
-blib/
-/raku-mime-types.iml
-.idea
 .precomp/
+/MIME-Types-*
