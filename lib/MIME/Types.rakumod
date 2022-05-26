@@ -3,15 +3,22 @@ has %.exts  is built(False);
 has %.types is built(False);
 
 method !SET-SELF(IO::Path:D $io) {
+    my %types;
+    my %exts;
+
     for $io.lines.grep({ .chars and !.starts-with('#') }) -> $line {
         my str @exts  = $line.words;
         my str $ctype = @exts.shift;
 
-        %!types{$ctype} := @exts;
+        %types{$ctype} := @exts;
         for @exts -> $ext {
-            %!exts{$ext} := $ctype;
+            %exts{$ext} := $ctype;
         }
     }
+
+    %!types := %types.Map;
+    %!exts  := %exts.Map;
+
     self
 }
 
@@ -34,7 +41,7 @@ method type(Str:D $ext) {
 }
 
 method extensions(Str:D $type) {
-    %.types{$type}<> // Nil
+    %.types{$type} // Nil
 }
 
 =begin pod
