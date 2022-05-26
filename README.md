@@ -33,12 +33,12 @@ An example mime.types is included in the resources/ directory, and is used by th
 AUTHOR
 ======
 
-Zoffix Znet
+Timothy Totten
 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2011 - 2015 Zoffix Znet
+Copyright 2011 - 2015 Timothy Totten
 
 Copyright 2016 - 2022 Raku Community
 
