@@ -6,6 +6,8 @@
     "Cam Stuart",
     "Raku Community"
   ],
+  "build-depends": [
+  ],
   "depends": [
   ],
   "description": "determine mime type by file extension",
@@ -29,6 +31,8 @@
     "MIME",
     "TYPE",
     "EXTENSION"
+  ],
+  "test-depends": [
   ],
   "version": "0.3"
 }

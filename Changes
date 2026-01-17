@@ -1,6 +1,8 @@
 Revision history for MIME::Types
 
 {{$NEXT}}
+
+0.3  2026-01-17T14:04:07+01:00
     - Add 100% coverage testing
     - Modernized META6 info
     - Update copyright year
