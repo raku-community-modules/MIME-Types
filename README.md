@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/raku-community-modules/MIME-Types/actions/workflows/test.yml/badge.svg)](https://github.com/raku-community-modules/MIME-Types/actions)
+[![Actions Status](https://github.com/raku-community-modules/MIME-Types/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/MIME-Types/actions) [![Actions Status](https://github.com/raku-community-modules/MIME-Types/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/MIME-Types/actions) [![Actions Status](https://github.com/raku-community-modules/MIME-Types/actions/workflows/windows.yml/badge.svg)](https://github.com/raku-community-modules/MIME-Types/actions)
 
 NAME
 ====
@@ -40,7 +40,7 @@ COPYRIGHT AND LICENSE
 
 Copyright 2011 - 2015 Timothy Totten
 
-Copyright 2016 - 2022 Raku Community
+Copyright 2016 - 2026 Raku Community
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

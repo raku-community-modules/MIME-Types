@@ -3,9 +3,8 @@
   "authors": [
     "Timothy Totten",
     "Sizhe Zhao",
-    "Cam Stuart"
-  ],
-  "build-depends": [
+    "Cam Stuart",
+    "Raku Community"
   ],
   "depends": [
   ],
@@ -13,24 +12,23 @@
   "license": "Artistic-2.0",
   "meta-version": "1",
   "name": "MIME::Types",
-  "perl": "6.*",
   "provides": {
     "MIME::Types": "lib/MIME/Types.rakumod"
   },
+  "raku": "6.*",
   "resources": [
     "mime.types"
   ],
   "source-url": "https://github.com/raku-community-modules/MIME-Types.git",
   "support": {
     "bugtracker": "https://github.com/raku-community-modules/MIME-Types/issues",
+    "email": "community@raku.org",
     "source": "https://github.com/raku-community-modules/MIME-Types.git"
   },
   "tags": [
     "MIME",
-    "type",
-    "extension"
+    "TYPE",
+    "EXTENSION"
   ],
-  "test-depends": [
-  ],
-  "version": "0.2"
+  "version": "0.3"
 }
